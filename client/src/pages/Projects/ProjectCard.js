@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import Fade from "react-reveal/Fade";
 
 function ProjectCard({
   name,
@@ -8,21 +9,32 @@ function ProjectCard({
   created_at,
   language,
 }) {
-  const [redirect, setRedirect] = useState(false);
-
-  const renderRedirect = () => {
-    if (redirect) {
-      window.location = url;
-    }
-  };
-
   return (
-    <div className="projects_project-card" onClick={() => setRedirect(true)}>
-      <h4 className="project-card-name">{name}</h4>
-      <p className="project-card-description">{description}</p>
-      <p className="project-card-created">{created_at}</p>
-      <p className="project-card-language">{language}</p>
-      {renderRedirect()}
+    <div className="projects_project-card">
+      <Fade bottom>
+        <h4 className="project-card_name">{name}</h4>
+        <p className="project-card_description">{description}</p>
+        <p className="project-card_created">{created_at}</p>
+        <p className="project-card_language">{language}</p>
+        <div className="project-card_link-container">
+          <a
+            className="project-card_link"
+            onClick={() => window.open(url, "_blank")}
+          >
+            Github
+          </a>
+          {homepage ? (
+            <a
+              className="project-card_link"
+              onClick={() => window.open(homepage, "_blank")}
+            >
+              Webpage
+            </a>
+          ) : (
+            ""
+          )}
+        </div>
+      </Fade>
     </div>
   );
 }

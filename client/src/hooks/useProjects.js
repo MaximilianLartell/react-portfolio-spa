@@ -3,7 +3,6 @@ import axios from "axios";
 
 function useProjects() {
   const [projects, setProjects] = useState([]);
-
   useEffect(() => {
     axios({
       url: "https://api.github.com/users/MaximilianLartell/repos",
@@ -13,6 +12,7 @@ function useProjects() {
       },
     })
       .then((response) => {
+        console.log(response);
         response.data.map((project) => {
           const proj = {
             name: project.name,

@@ -12,135 +12,89 @@
 }
 
 html {
-  font-family: 'Quicksand', sans-serif;
-  color: #28363d;
+  font-family: 'Rubik', sans-serif;
+  color: rgb(50, 55, 68);
   line-height: 1.5;
+  background-color: rgb(228, 228, 228);
 }
 
 h1 {
   font-weight: 700;
   font-size: 40px;
-  margin: 5px; 
+  margin: 5px 0;
 }
 
 h3 {
   font-weight: 700;
+  font-size: 25px;
+  margin: 5px 0;
+}
+
+h4 {
+  font-weight: 400;
   font-size: 20px;
-  margin: 5px;
+  margin: 0;
 }
 
 p {
   font-weight: 200;
   font-size: 15px;
-  margin: 0px; 
+  margin: 10px 0px;
 }
 
 li {
-  margin: 0px 10px; 
+  margin: 0px 10px;
   font-weight: 100;
-  font-size: 15px;
   display: inline-block;
 }
 
 img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  width: 250px;
+  height: auto;
+  border-radius: 5%;
   margin: 20px auto 0px auto;
 }
 
-/* The home component */
-
-.home {
-  background-color: #ebeceb;
-  height: 100vh;
-  text-align: center;
-  padding-top: 150px; 
-}
-
-.home_content-container {
-  display: inline-block; 
-  width: 90%; 
-  text-align: left;
-  margin: auto;
-}
-
-.home_link {
-  font-size: 17px;
-  font-weight: 600;
-}
-
-/* The about component */
-
-.about, .projects {
-  background-color: rgb(218, 219, 219);
-  padding: 70px 0; 
-  text-align: center;
-}
-
-.about_bio-container {
-  width: 90%;
-  margin: 40px auto 0px auto;
-}
-
-.bio-paragraph {
-  margin: 20px;
-}
-
-.about_experience-container {
-  margin: 40px 0;
-}
-
-.about_previous-work, .about_education {
-  width: 90%;
-  margin: 20px auto 0px auto;
-}
-
-.about_job-card, .about_education-card, .projects_project-card {
-  margin: 20px;
-}
-
-.about_skills {
-  width: 90%;
-  margin: 40px auto 0px auto;
-}
-
-.skills-list {
-  margin: 20px auto 0px auto;
-}
-
-.navbar-wrapper {
-  position: relative;
-  height: 50px; 
-  background-color: antiquewhite;
-  text-align: center;
-}
-
-.sticky .navbar-inner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-}
-
-.navbar-inner {
-  height: 50px; 
-  text-align: center;
-  background-color: antiquewhite;
-}
-
-.navbar-link {
-  margin: 0 10px
+a, a:visited {
+  color: rgb(49, 49, 49);
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 600px) {
-  .home_link {
-    border-bottom: solid 1px rgb(22, 22, 22);
+  h1 {
+    font-weight: 700;
+    font-size: 50px;
+    margin: 0;
+    transition: opacity 0.3s;
   }
   
-  .home_link:hover {
-    border: solid 1px rgb(65, 66, 65);
+  h3 {
+    font-weight: 700;
+    font-size: 35px;
+    margin: 0;
+    transition: opacity 0.3s;
   }
 
+  h4 {
+    font-weight: 400;
+    font-size: 30px;
+    margin: 0;
+    transition: opacity 0.3s;
+  }
+  
+  p {
+    font-weight: 200;
+    font-size: 20px;
+    margin: 10px 0px;
+    transition: opacity 0.3s;
+  }
+
+  span {
+    transition: opacity 0.3s;
+  }
+
+  li {
+    font-size: 15px;
+  }
+  
 }

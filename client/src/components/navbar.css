@@ -1,0 +1,41 @@
+.navbar-wrapper {
+  position: relative;
+  height: 50px;
+  background-color: white;
+  text-align: center;
+  background-color: rgb(228, 228, 228);
+}
+
+.sticky .navbar-inner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.navbar-inner {
+  text-align: center;
+  padding: 10px;
+  background-color: white;
+  transition: height 0.2s, opacity 0.2s;
+  background-color: rgb(37, 41, 52);
+}
+
+.navbar-link {
+  color: white;
+  margin: auto 10px;
+}
+
+@media only screen and (min-width: 600px) {
+
+  .navbar-link {
+    margin: 0 10px;
+    transition: opacity 0.2s, font-size 0.2s;
+    font-size: 15px;
+  }
+
+  .navbar-link:hover {
+    font-size: 16px;
+  }
+}
