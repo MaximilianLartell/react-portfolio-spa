@@ -12,7 +12,7 @@ function About() {
     <div className="about">
       <Fade bottom>
         <h1>About me</h1>
-        <img src={profilePic}></img>
+        <img alt="img of me" src={profilePic}></img>
       </Fade>
       <AboutText />
       <section className="about_experience">

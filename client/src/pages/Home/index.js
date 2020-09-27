@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import Fade from "react-reveal/Fade";
 import "./home.css";
 
@@ -27,7 +27,7 @@ function Home() {
 
   return (
     <div className="home">
-      <Fade down>
+      <Fade left>
         <section className="home_content-container">
           <h1 style={opacity}>
             Hi, <br /> my name is Maximilian

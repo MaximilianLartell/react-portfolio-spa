@@ -8,16 +8,16 @@ function PreviousWork() {
     <div className="about_previous-work">
       <Fade left>
         <h3 className="previout-work-header">Previous work</h3>
-        {jobHistory().map((el, i) => (
-          <JobCard
-            key={el.employer + i}
-            employer={el.employer}
-            position={el.position}
-            description={el.description}
-            years={el.year}
-          />
-        ))}
       </Fade>
+      {jobHistory().map((el, i) => (
+        <JobCard
+          key={el.employer + i}
+          employer={el.employer}
+          position={el.position}
+          description={el.description}
+          years={el.year}
+        />
+      ))}
     </div>
   );
 }

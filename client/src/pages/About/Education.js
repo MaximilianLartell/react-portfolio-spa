@@ -8,6 +8,7 @@ function Education() {
     <div className="about_education">
       <Fade right>
         <h3 className="education-header">Education</h3>
+      </Fade>
         {educationHistory().map((el, i) => (
           <EducationCard
             key={el.education + i}
@@ -17,7 +18,6 @@ function Education() {
             years={el.year}
           />
         ))}
-      </Fade>
     </div>
   );
 }

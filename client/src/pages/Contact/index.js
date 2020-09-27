@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Fade from "react-reveal/Fade";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { IconContext } from "react-icons";

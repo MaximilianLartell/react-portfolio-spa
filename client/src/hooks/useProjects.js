@@ -23,6 +23,7 @@ function useProjects() {
             language: project.language,
           };
           setProjects((prev) => [...prev, proj]);
+          return null;
         });
       })
       .catch((err) => {
@@ -34,14 +35,3 @@ function useProjects() {
 }
 
 export default useProjects;
-
-// (prev) => [
-//   ...prev,
-//   {
-//     name: project.name,
-//     url: project.url,
-//     homepage: project.homepage,
-//     created_at: project.created_at,
-//     language: project.language,
-//   },
-// ];

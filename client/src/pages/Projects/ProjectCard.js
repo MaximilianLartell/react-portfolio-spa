@@ -8,28 +8,29 @@ function ProjectCard({
   homepage,
   created_at,
   language,
+  i,
 }) {
   return (
     <div className="projects_project-card">
-      <Fade bottom>
+      <Fade left={i % 2 === 0 ? true : false} right={i % 2 === 0 ? false : true}>
         <h4 className="project-card_name">{name}</h4>
         <p className="project-card_description">{description}</p>
         <p className="project-card_created">{created_at}</p>
         <p className="project-card_language">{language}</p>
         <div className="project-card_link-container">
-          <a
+          <div
             className="project-card_link"
             onClick={() => window.open(url, "_blank")}
           >
             Github
-          </a>
+          </div>
           {homepage ? (
-            <a
+            <div
               className="project-card_link"
               onClick={() => window.open(homepage, "_blank")}
             >
               Webpage
-            </a>
+            </div>
           ) : (
             ""
           )}
