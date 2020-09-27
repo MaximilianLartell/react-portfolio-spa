@@ -12,7 +12,6 @@ function useProjects() {
       },
     })
       .then((response) => {
-        console.log(response);
         response.data.map((project) => {
           const proj = {
             name: project.name,
