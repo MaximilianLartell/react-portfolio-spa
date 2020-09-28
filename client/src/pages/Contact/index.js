@@ -13,7 +13,7 @@ function Projects() {
     <Fade>
       <div className="contact">
         <h1>Contact</h1>
-        <a className="contact_email" href="mailto: abc@example.com">
+        <a className="contact_email" href="mailto: max.lartell@gmail.com">
           max.lartell@gmail.com
         </a>
         <IconContext.Provider
