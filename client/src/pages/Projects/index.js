@@ -10,7 +10,7 @@ function Projects() {
   return (
     <div className="projects">
       <Fade bottom>
-        <h1>This is my works</h1>
+        <h1>Projects</h1>
       </Fade>
       <section className="projects_container">
         {projects.map((el, i) => (
