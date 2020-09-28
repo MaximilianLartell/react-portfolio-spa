@@ -7,18 +7,28 @@ function Navbar() {
   const [height, setHeight] = useState(0);
   const ref = useRef(null);
 
-  const changeOpacity = (e) => {
-    if (e && e.target.id === "nav_1") {
-      setOpacity([1, 0.5, 0.5, 0.5]);
+  const mouseEnter = (e) => {
+    if (ref.current && ref.current.getBoundingClientRect().y === 0) {
+      if (e.target.id === "nav_1") {
+        setOpacity([1, 0.5, 0.5, 0.5]);
+      }
+      if (e.target.id === "nav_2") {
+        setOpacity([0.5, 1, 0.5, 0.5]);
+      }
+      if (e.target.id === "nav_3") {
+        setOpacity([0.5, 0.5, 1, 0.5]);
+      }
+      if (e.target.id === "nav_4") {
+        setOpacity([0.5, 0.5, 0.5, 1]);
+      }
     }
-    if (e && e.target.id === "nav_2") {
-      setOpacity([0.5, 1, 0.5, 0.5]);
-    }
-    if (e && e.target.id === "nav_3") {
-      setOpacity([0.5, 0.5, 1, 0.5]);
-    }
-    if (e && e.target.id === "nav_4") {
-      setOpacity([0.5, 0.5, 0.5, 1]);
+  };
+
+  const mouseLeave = (e) => {
+    if (ref.current && ref.current.getBoundingClientRect().y > 0) {
+      setOpacity([0, 0, 0, 0]);
+    } else {
+      setOpacity([1, 1, 1, 1]);
     }
   };
 
@@ -41,7 +51,7 @@ function Navbar() {
   }, []);
 
   return (
-    <div className="navbar-inner" style={{height: height}} ref={ref}>
+    <div className="navbar-inner" style={{ height: height }} ref={ref}>
       <ul className="navbar-items">
         <Link
           id="nav_1"
@@ -52,8 +62,8 @@ function Navbar() {
           smooth={true}
           offset={0}
           duration={300}
-          onMouseEnter={(e) => changeOpacity(e)}
-          onMouseLeave={() => setOpacity([1, 1, 1, 1])}
+          onMouseEnter={(e) => mouseEnter(e)}
+          onMouseLeave={(e) => mouseLeave(e)}
           style={{ opacity: opacity[0] }}
         >
           Home
@@ -67,8 +77,8 @@ function Navbar() {
           smooth={true}
           offset={0}
           duration={300}
-          onMouseEnter={(e) => changeOpacity(e)}
-          onMouseLeave={() => setOpacity([1, 1, 1, 1])}
+          onMouseEnter={(e) => mouseEnter(e)}
+          onMouseLeave={(e) => mouseLeave(e)}
           style={{ opacity: opacity[1] }}
         >
           About me
@@ -82,8 +92,8 @@ function Navbar() {
           smooth={true}
           offset={0}
           duration={300}
-          onMouseEnter={(e) => changeOpacity(e)}
-          onMouseLeave={() => setOpacity([1, 1, 1, 1])}
+          onMouseEnter={(e) => mouseEnter(e)}
+          onMouseLeave={(e) => mouseLeave(e)}
           style={{ opacity: opacity[2] }}
         >
           Projects
@@ -97,8 +107,8 @@ function Navbar() {
           smooth={true}
           offset={0}
           duration={300}
-          onMouseEnter={(e) => changeOpacity(e)}
-          onMouseLeave={() => setOpacity([1, 1, 1, 1])}
+          onMouseEnter={(e) => mouseEnter(e)}
+          onMouseLeave={(e) => mouseLeave(e)}
           style={{ opacity: opacity[3] }}
         >
           Contact
