@@ -15,7 +15,7 @@ const jobHistory = () => {
     {
       employer: "Renee Voltaire",
       position: "Production/sales",
-      description: "I worked with the production kitchen, as well as stand in sales personel, for this fast growing health food company. The rapid expansion the company nuderwent during my time there made the working environment fast paced, and with new challanges arising on a daily basis a problem solving oriented mindset was essential.",
+      description: "I worked with the production kitchen, as well as stand in sales personel, for this fast growing health food company. The rapid expansion the company underwent during my time there made the working environment fast paced, and with new challanges arising on a daily basis a problem solving oriented mindset was essential.",
       years: "2010-2012",
     },
   ];

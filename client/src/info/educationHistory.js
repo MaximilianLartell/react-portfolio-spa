@@ -9,13 +9,13 @@ export default function educationHistory() {
       {
         education: "Sweco trainee program",
         school: "Sweco",
-        description: "During the first nine monthrs of my emplyment at Sweco i was a part of the companys popular trainee program which ran in parallell with my consultant role, where i got the chanse to participate in activities ranging from workshops in design thinking and business acumen, to educations in topics like sustainability and presentation technique.",
+        description: "During the first nine months of my emplyment at Sweco i was a part of the companies popular trainee program which ran in parallell with my consultant role, where i got to participate in activities ranging from workshops in design thinking and business acumen, to educations in topics like sustainability and presentation technique.",
         years: "2018-2019",
       },
       {
         education: "Water management",
         school: "Technical University of Delft, TUDelft",
-        description: "I spent a six month exchange semester at the highly renowned Technical University of Delft where I got a chanse to participate in their signature courses in Water management and sustainable urband development.",
+        description: "I spent a six month exchange semester at the highly renowned Technical University of Delft where I took several of their signature courses in water management and sustainable urban development.",
         years: "2017-2017",
       },
       {
