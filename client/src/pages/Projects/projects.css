@@ -21,10 +21,6 @@
   margin: 2px 0;
 }
 
-.project-card_link:hover {
-  background-color: rgb(37, 41, 52);
-  color: white;
-}
 
 @media only screen and (min-width: 600px) {
   .project-card_link-container {
@@ -56,5 +52,11 @@
     font-size: 15px;
     border-radius: 5px 5px;
     margin: 0 2px 0 0;
+  }
+
+  .project-card_link:hover {
+    background-color: rgb(37, 41, 52);
+    color: white;
+    cursor: pointer;
   }
 }

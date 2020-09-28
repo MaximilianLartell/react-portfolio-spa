@@ -13,5 +13,9 @@
     .contact_email {
       font-size: 40px;
     }
+
+    .contact_link:hover {
+      cursor: pointer;
+    }
   }
   
