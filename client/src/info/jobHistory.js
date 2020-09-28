@@ -3,7 +3,7 @@ const jobHistory = () => {
     {
       employer: "Sweco",
       position: "Water and sanitary systems design",
-      description: "At Sweco I worked with the design of sustainable water and sanitary systems in some of Swedens largest infrastructure projects. With the projects often made up by large multidiciplinary teams, both communication with other diciplines and stakeholders, as well as the possibility to see the big picture without losing the eye for detail was crucial skills in order to guarantee the best final product possible.",
+      description: "At Sweco I worked with the design of sustainable water and sanitary systems in some of Sweden's largest infrastructure projects. Working in large multidisciplinary teams, both communication with other disciplines, as well as maintaining a big picture perspective even when working with very specific details were crucial parts in order to create the best final product possible.",
       years: "2018-2020",
     },
     {
@@ -15,7 +15,7 @@ const jobHistory = () => {
     {
       employer: "Renee Voltaire",
       position: "Production/sales",
-      description: "I worked with the production kitchen, as well as stand in sales personel, for this fast growing health food company. The rapid expansion the company underwent during my time there made the working environment fast paced, and with new challanges arising on a daily basis a problem solving oriented mindset was essential.",
+      description: "I worked with the production, as well as stand in sales personel, for this fast growing health food company. The rapid expansion the company underwent during my time there made the working environment fast paced. With new challanges arising on a daily basis, a problem solving oriented mindset was essential.",
       years: "2010-2012",
     },
   ];

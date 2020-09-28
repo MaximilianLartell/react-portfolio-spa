@@ -3,13 +3,13 @@ export default function educationHistory() {
       {
         education: "Full Stack JavaScript coding bootcamp",
         school: "</Salt>",
-        description: "I got accepted, and past one of the toughest coding bootcamps in the world, where I acquired skills in JavaScript, React, Node.js, Express, as well as several other technologies.",
+        description: "I got accepted, and passed one of the toughest coding bootcamps in the world, where I acquired skills in JavaScript, React, Node.js, Express, as well as several other technologies.",
         years: "2020-2020",
       },
       {
         education: "Sweco trainee program",
         school: "Sweco",
-        description: "During the first nine months of my emplyment at Sweco i was a part of the companies popular trainee program which ran in parallell with my consultant role, where i got to participate in activities ranging from workshops in design thinking and business acumen, to educations in topics like sustainability and presentation technique.",
+        description: "During the first nine months of my employment at Sweco I was a part of the company's popular trainee program which ran in parallel with my consultant role, where I got to participate in activities ranging from workshops in design thinking and business acumen, to education in topics like sustainability and presentation technique.",
         years: "2018-2019",
       },
       {
@@ -21,7 +21,7 @@ export default function educationHistory() {
       {
         education: "Civil/Environmental Engineering",
         school: "Royal Institute of Technology",
-        description: "I finished a degree program at Swedens top ranked technical university, including a bachelor degree in Civil Enginering and a master degree in Environmental Engineering and Sustainable Infrastructure.",
+        description: "I finished a degree program at Sweden's top ranked technical university, including a bachelor degree in Civil Engineering and a master degree in Environmental Engineering and Sustainable Infrastructure.",
         years: "2013-2017",
       },
     ];
