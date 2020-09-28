@@ -15,7 +15,7 @@ function Education() {
             education={el.education}
             school={el.school}
             description={el.description}
-            years={el.year}
+            years={el.years}
           />
         ))}
     </div>

@@ -4,7 +4,7 @@ import "./navbar.css";
 
 function Navbar() {
   const [opacity, setOpacity] = useState([0, 0, 0, 0]);
-  const [height, setHeight] = useState(0)
+  const [height, setHeight] = useState(0);
   const ref = useRef(null);
 
   const changeOpacity = (e) => {

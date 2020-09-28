@@ -3,7 +3,7 @@
 .about {
   padding: 70px 0;
   text-align: center;
-  background-color:rgb(228, 228, 228);
+  background-color: rgb(228, 228, 228);
   opacity: 0.99;
 }
 
@@ -33,6 +33,14 @@
   margin: 25px;
 }
 
+.education-card_years,
+.job-card_years,
+.education-card_description,
+.job-card_description {
+  font-size: 11px;
+  opacity: 0.9;
+}
+
 .about_skills {
   width: 90%;
   margin: 40px auto 0px auto;
@@ -43,7 +51,6 @@
 }
 
 @media only screen and (min-width: 600px) {
-
   .bio-paragraph {
     width: 80%;
   }
@@ -66,5 +73,13 @@
   .about_job-card,
   .about_education-card {
     margin: 20px 0 0 5px;
+  }
+
+  .education-card_years,
+  .job-card_years,
+  .education-card_description,
+  .job-card_description {
+    font-size: 15px;
+    opacity: 0.9;
   }
 }

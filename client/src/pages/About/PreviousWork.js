@@ -15,7 +15,7 @@ function PreviousWork() {
           employer={el.employer}
           position={el.position}
           description={el.description}
-          years={el.year}
+          years={el.years}
         />
       ))}
     </div>
