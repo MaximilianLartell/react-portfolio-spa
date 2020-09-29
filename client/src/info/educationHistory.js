@@ -9,7 +9,7 @@ export default function educationHistory() {
       {
         education: "Sweco trainee program",
         school: "Sweco",
-        description: "During the first nine months of my employment at Sweco I was a part of the company's popular trainee program which ran in parallel with my consultant role, where I got to participate in activities ranging from workshops in design thinking and business acumen, to education in topics like sustainability and presentation technique.",
+        description: "During the first nine months of my employment at Sweco I was a part of the company's popular trainee program which ran in parallel with my consultant role. During the program I got to participate in activities ranging from workshops in design thinking and business acumen, to education in topics like sustainability and presentation technique.",
         years: "2018-2019",
       },
       {

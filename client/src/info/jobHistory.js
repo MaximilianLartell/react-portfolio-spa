@@ -3,7 +3,7 @@ const jobHistory = () => {
     {
       employer: "Sweco",
       position: "Water and sanitary systems design",
-      description: "At Sweco I worked with the design of sustainable water and sanitary systems in some of Sweden's largest infrastructure projects. Working in large multidisciplinary teams, both communication with other disciplines, as well as maintaining a big picture perspective even when working with very specific details were crucial parts in order to create the best final product possible.",
+      description: "At Sweco I worked with the design of sustainable water and sanitary systems in some of Sweden's largest infrastructure projects. When working on fine details in large multidiciplinary projects I learned how clear comunication with the other technologies involved was vital in order to maintain the big picture perspective, and deliver the best product possible.",
       years: "2018-2020",
     },
     {
