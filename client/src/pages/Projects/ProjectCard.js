@@ -1,4 +1,5 @@
 import React from 'react';
+import { imgExist } from '../../utils';
 
 function ProjectCard({
   name,
@@ -12,11 +13,18 @@ function ProjectCard({
   return (
     <div className='projects_project-card'>
       <div className='project-card-content'>
-        <h4 className='project-card_name'>{name}</h4>
-        <p className='project-card_description'>{description}</p>
-        <p className='project-card_created'>{created_at.split('T')[0]}</p>
-        <p className='project-card_language'>{language}</p>
-        <div className='project-card_link-container'>
+        <h4 className='project-name'>{name}</h4>
+        {imgExist(name) ? (
+          <img
+            className='project-img'
+            src={require(`../../pictures/projects/${name}.png`)}
+          ></img>
+        ) : null}
+        <p className='project-language'>Written in {language}</p>
+        <p>Description</p>
+        <p className='project-description'>{description}</p>
+        <p className='project-created'>{created_at.split('T')[0]}</p>
+        <div className='link-container'>
           <div
             className='project-card_link'
             onClick={() => window.open(url, '_blank')}

@@ -15,6 +15,7 @@ html {
   font-family: 'Rubik', sans-serif;
   color: rgb(50, 55, 68);
   line-height: 1.5;
+  /* background-color: rgb(219, 217, 199); */
   background-color: rgb(228, 228, 228);
 }
 
@@ -39,7 +40,7 @@ h4 {
 p {
   font-weight: 200;
   font-size: 15px;
-  margin: 10px 0px;
+  margin: 5px 0px;
 }
 
 li {
@@ -55,7 +56,8 @@ img {
   margin: 20px auto 0px auto;
 }
 
-a, a:visited {
+a,
+a:visited {
   color: rgb(49, 49, 49);
   text-decoration: none;
 }
@@ -67,7 +69,7 @@ a, a:visited {
     margin: 0;
     transition: opacity 0.3s;
   }
-  
+
   h3 {
     font-weight: 700;
     font-size: 35px;
@@ -81,7 +83,7 @@ a, a:visited {
     margin: 0;
     transition: opacity 0.3s;
   }
-  
+
   p {
     font-weight: 200;
     font-size: 20px;
@@ -96,5 +98,4 @@ a, a:visited {
   li {
     font-size: 15px;
   }
-  
 }

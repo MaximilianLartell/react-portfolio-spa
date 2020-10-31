@@ -1,24 +1,25 @@
-import React, { useRef, useState, useEffect } from "react";
-import { Link } from "react-scroll";
-import "./navbar.css";
+import React, { useRef, useState, useEffect } from 'react';
+import { Link } from 'react-scroll';
+import './navbar.css';
 
 function Navbar() {
   const [opacity, setOpacity] = useState([0, 0, 0, 0]);
+  const [linkStatus, setLinkStatus] = useState('disabled');
   const [height, setHeight] = useState(0);
   const ref = useRef(null);
 
   const mouseEnter = (e) => {
     if (ref.current && ref.current.getBoundingClientRect().y === 0) {
-      if (e.target.id === "nav_1") {
+      if (e.target.id === 'nav_1') {
         setOpacity([1, 0.5, 0.5, 0.5]);
       }
-      if (e.target.id === "nav_2") {
+      if (e.target.id === 'nav_2') {
         setOpacity([0.5, 1, 0.5, 0.5]);
       }
-      if (e.target.id === "nav_3") {
+      if (e.target.id === 'nav_3') {
         setOpacity([0.5, 0.5, 1, 0.5]);
       }
-      if (e.target.id === "nav_4") {
+      if (e.target.id === 'nav_4') {
         setOpacity([0.5, 0.5, 0.5, 1]);
       }
     }
@@ -35,29 +36,31 @@ function Navbar() {
   const handleScroll = () => {
     if (ref.current && ref.current.getBoundingClientRect().y > 0) {
       setOpacity([0, 0, 0, 0]);
+      setLinkStatus('disabled');
       setHeight(0);
     } else {
       setOpacity([1, 1, 1, 1]);
+      setLinkStatus('active');
       setHeight(50);
     }
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", () => handleScroll);
+      window.removeEventListener('scroll', () => handleScroll);
     };
   }, []);
 
   return (
-    <div className="navbar-inner" style={{ height: height }} ref={ref}>
-      <ul className="navbar-items">
+    <div className='navbar-inner' style={{ height: height }} ref={ref}>
+      <ul className='navbar-items'>
         <Link
-          id="nav_1"
-          className="navbar-link"
-          activeClass="active"
-          to="home"
+          id='nav_1'
+          className={`navbar-link-${linkStatus}`}
+          activeClass='active'
+          to='home'
           spy={true}
           smooth={true}
           offset={0}
@@ -69,10 +72,10 @@ function Navbar() {
           Home
         </Link>
         <Link
-          id="nav_2"
-          className="navbar-link"
-          activeClass="active"
-          to="about"
+          id='nav_2'
+          className={`navbar-link-${linkStatus}`}
+          activeClass='active'
+          to='about'
           spy={true}
           smooth={true}
           offset={0}
@@ -84,10 +87,10 @@ function Navbar() {
           About me
         </Link>
         <Link
-          id="nav_3"
-          className="navbar-link"
-          activeClass="active"
-          to="projects"
+          id='nav_3'
+          className={`navbar-link-${linkStatus}`}
+          activeClass='active'
+          to='projects'
           spy={true}
           smooth={true}
           offset={0}
@@ -99,10 +102,10 @@ function Navbar() {
           Projects
         </Link>
         <Link
-          id="nav_4"
-          className="navbar-link"
-          activeClass="active"
-          to="contact"
+          id='nav_4'
+          className={`navbar-link-${linkStatus}`}
+          activeClass='active'
+          to='contact'
           spy={true}
           smooth={true}
           offset={0}

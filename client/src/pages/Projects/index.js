@@ -1,18 +1,18 @@
-import React from "react";
-import Fade from "react-reveal/Fade";
-import useProjects from "../../hooks/useProjects";
-import ProjectCard from "./ProjectCard";
-import "./projects.css";
+import React from 'react';
+import Fade from 'react-reveal/Fade';
+import useProjects from '../../hooks/useProjects';
+import ProjectCard from './ProjectCard';
+import './projects.css';
 
 function Projects() {
   const projects = useProjects();
 
   return (
-    <div className="projects">
+    <div className='projects'>
       <Fade bottom>
         <h1>Projects</h1>
       </Fade>
-      <section className="projects_container">
+      <section className='projects_container'>
         {projects.map((el, i) => (
           <ProjectCard
             key={el.name}
