@@ -9,9 +9,7 @@ function Projects() {
 
   return (
     <div className='projects'>
-      <Fade bottom>
-        <h1>Projects</h1>
-      </Fade>
+      <h1>Projects</h1>
       <section className='projects_container'>
         {projects.map((el, i) => (
           <ProjectCard

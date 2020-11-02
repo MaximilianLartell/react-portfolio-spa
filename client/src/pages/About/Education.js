@@ -15,6 +15,7 @@ function Education() {
             key={el.education + i}
             education={el.education}
             school={el.school}
+            abbrevation={el.abbrevation}
             description={el.description}
             years={el.years}
           />

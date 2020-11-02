@@ -31,10 +31,23 @@
 .about_education-card {
   text-align: left;
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 16px;
   padding: 15px;
   width: 100%;
   margin: 10px auto;
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.education-card_full-school {
+  margin-bottom: 4px;
+  margin-left: 7px;
+  font-size: 11px;
+  font-style: italic;
 }
 
 .education-card_years,
@@ -85,8 +98,20 @@
   .about_education-card {
     margin: 20px 0 0 5px;
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 16px;
     padding: 15px;
+  }
+
+  .education-card_education,
+  .job-card_position {
+    font-size: 18px;
+  }
+
+  .education-card_full-school {
+    margin-bottom: 7px;
+    margin-left: 10px;
+    font-size: 15px;
+    font-style: italic;
   }
 
   .education-card_years,

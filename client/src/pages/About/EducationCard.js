@@ -1,11 +1,15 @@
 import React from 'react';
+import AboutAccordion from '../../components/AboutAccordion';
 
-function EducationCard({ education, school, description, years }) {
+function EducationCard({ education, school, abbrevation, description, years }) {
   return (
     <div className='about_education-card'>
-      <h4 className='education-card_school'>{school}</h4>
+      <div className='title-wrapper'>
+        <h4 className='education-card_school'>{`${abbrevation} `} </h4>
+        <p className='education-card_full-school'>{school}</p>
+      </div>
       <p className='education-card_education'>{education}</p>
-      <p className='education-card_description'>{description}</p>
+      <AboutAccordion text={description} />
       <p className='education-card_years'>{years}</p>
     </div>
   );

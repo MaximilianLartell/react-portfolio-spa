@@ -1,0 +1,8 @@
+.title {
+  font-size: 15px;
+  transition: font-size 0.1s;
+}
+
+.description {
+  font-size: 15px;
+}

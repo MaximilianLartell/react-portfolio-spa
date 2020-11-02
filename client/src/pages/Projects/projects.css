@@ -25,11 +25,11 @@
 }
 
 .project-card-content {
-  border-radius: 5px;
+  border-radius: 16px;
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  padding: 15px;
+  padding-top: 15px;
   position: relative;
   width: 400px;
   max-width: 80%;
@@ -37,12 +37,14 @@
 }
 
 .project-created {
+  margin-left: 15px;
   font-size: 11px;
   opacity: 0.9;
   width: 100px;
 }
 
 .link-container {
+  margin-bottom: 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -73,7 +75,7 @@
 .project-img {
   width: 100%;
   height: auto;
-  border-radius: 5px;
+  border-radius: 0px;
 }
 
 @media only screen and (min-width: 800px) {
@@ -105,11 +107,11 @@
   }
 
   .project-card-content {
-    border-radius: 5px;
+    border-radius: 16px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    padding-top: 15px;
     position: relative;
     width: 400px;
     max-width: 70%;
@@ -152,6 +154,16 @@
     font-size: 15px;
   }
 
+  .desc-container {
+    max-height: 52px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .desc-container.expand {
+    max-height: 250px;
+  }
+
   .project-description {
     font-size: 15px;
   }
@@ -169,6 +181,6 @@
   .project-img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 0px;
   }
 }
