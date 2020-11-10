@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import MuiAccordion from '@material-ui/core/Accordion';
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
@@ -8,36 +8,43 @@ import './accordion.css';
 
 const Accordion = withStyles({
   root: {
-    paddingLeft: 15,
-    paddingRight: 15,
+    margin: '0 15px',
     boxShadow: 'none',
+    borderRadius: 16,
+    // backgroundColor: 'rgb(210, 230, 207)',
+    backgroundColor: 'rgb(206, 212, 200)',
     '&:not(:last-child)': {
       borderBottom: 0,
+    },
+    '&:hover': {
+      boxShadow: '0px 0px 2px',
+    },
+    '&:active': {
+      boxShadow: '0px 0px 0px',
     },
     '&:before': {
       display: 'none',
     },
     '&$expanded': {
-      margin: 'auto',
+      margin: '0 15px',
     },
-    padding: 0,
   },
   expanded: {},
 })(MuiAccordion);
 
 const AccordionSummary = withStyles({
   root: {
-    padding: 0,
-    // borderBottom: '1px solid rgb(50, 55, 68)',
-    marginBottom: -1,
-    height: 20,
+    padding: '0 15px',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    borderRadius: 16,
+    minHeight: 15,
     '&$expanded': {
-      margin: 0,
       minHeight: 56,
       borderBottom: 'none',
-    },
-    '&:hover': {
-      borderBottom: '1px solid rgb(50, 55, 68)',
+      backgroundColor: 'rgb(168, 173, 163)',
+      borderRadius: '16px 16px 0 0',
     },
   },
   content: {
@@ -50,19 +57,26 @@ const AccordionSummary = withStyles({
 
 const AccordionDetails = withStyles((theme) => ({
   root: {
-    padding: 15,
-    borderRadius: 0,
-    backgroundColor: 'rgb(242, 243, 241)',
+    padding: '0 15px',
     marginTop: 0,
   },
 }))(MuiAccordionDetails);
 
 export default function CustomAccordion({ text }) {
+  const [title, setTitle] = useState('Read more');
+
+  const changeTitle = () => {
+    title === 'Close' ? setTitle('Read more') : setTitle('Close');
+  };
+
   return (
     <div>
       <Accordion square>
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <p className='title'>Read more</p>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          onClick={() => changeTitle()}
+        >
+          <p className='title'>{title}</p>
         </AccordionSummary>
         <AccordionDetails>
           <p className='description'>{text}</p>

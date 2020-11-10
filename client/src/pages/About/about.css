@@ -27,14 +27,30 @@
   margin: 20px auto 0px auto;
 }
 
+.skill-card-wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .about_job-card,
-.about_education-card {
+.about_education-card,
+.skill-card {
   text-align: left;
   background-color: #fff;
   border-radius: 16px;
-  padding: 15px;
   width: 100%;
   margin: 10px auto;
+  padding: 15px 0;
+}
+
+.skill-card {
+  text-align: center;
+  padding: 15px;
+  width: 50%;
 }
 
 .title-wrapper {
@@ -50,12 +66,43 @@
   font-style: italic;
 }
 
+.job-card_employer,
+.education-card_school {
+  margin-left: 15px;
+}
+.education-card_education,
+.education-card_years,
+.job-card_position,
+.job-card_years {
+  margin-left: 15px;
+}
+
 .education-card_years,
 .job-card_years,
 .education-card_description,
-.job-card_description {
+.job-card_description,
+.skill-card_description {
   font-size: 11px;
   /* opacity: 0.9; */
+}
+
+.skill-card_description {
+  margin-left: 10px;
+}
+
+.skill-element {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.skill-card_img {
+  height: auto;
+  width: 30px;
+  margin: 0;
 }
 
 .about_skills {
@@ -94,12 +141,29 @@
     padding: 10px;
   }
 
+  .skill-card-wrapper {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .about-skills {
+    width: 80%;
+  }
+
   .about_job-card,
-  .about_education-card {
+  .about_education-card,
+  .skill-card {
     margin: 20px 0 0 5px;
-    background-color: #fff;
     border-radius: 16px;
+  }
+
+  .skill-card {
     padding: 15px;
+    width: 25%;
+    min-width: 250px;
   }
 
   .education-card_education,
@@ -117,8 +181,14 @@
   .education-card_years,
   .job-card_years,
   .education-card_description,
-  .job-card_description {
+  .job-card_description,
+  .skill-card_description {
     font-size: 15px;
-    /* opacity: 0.9; */
+  }
+
+  .skill-card_img {
+    height: auto;
+    width: 50px;
+    margin: 0;
   }
 }

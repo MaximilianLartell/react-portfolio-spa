@@ -1,5 +1,4 @@
 import React from 'react';
-import Fade from 'react-reveal/Fade';
 import useProjects from '../../hooks/useProjects';
 import ProjectCard from './ProjectCard';
 import './projects.css';

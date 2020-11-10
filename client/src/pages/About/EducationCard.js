@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutAccordion from '../../components/AboutAccordion';
+import CustomAccordion from '../../components/Accordion';
 
 function EducationCard({ education, school, abbrevation, description, years }) {
   return (
@@ -9,8 +9,8 @@ function EducationCard({ education, school, abbrevation, description, years }) {
         <p className='education-card_full-school'>{school}</p>
       </div>
       <p className='education-card_education'>{education}</p>
-      <AboutAccordion text={description} />
       <p className='education-card_years'>{years}</p>
+      <CustomAccordion text={description} />
     </div>
   );
 }

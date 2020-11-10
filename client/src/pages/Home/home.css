@@ -14,26 +14,43 @@
 }
 
 .home_link {
-  padding: 3px;
-  font-size: 20px;
-  font-weight: 700;
-  color: rgb(155, 141, 141);
+  padding: 3px 6px;
+  color: rgb(37, 41, 52);
+  background-color: rgb(206, 212, 200);
+  border-radius: 16px;
+}
+
+.home_link:active {
+  font-weight: 200;
+  padding: 3px 6px;
+  color: rgb(37, 41, 52);
+  background-color: rgb(206, 212, 200);
+  border-radius: 16px;
+  font-size: 15px;
 }
 
 @media only screen and (min-width: 600px) {
   .home_link:hover {
-    color: white;
-    cursor: pointer;
     font-size: 30px;
+    font-weight: 500;
+    color: white;
+    background-color: rgb(37, 41, 52);
+    cursor: pointer;
+    text-decoration: none;
   }
 
   .home_link:active {
-    font-size: 28px;
+    font-weight: 200;
+    padding: 3px 6px;
+    color: white;
+    background-color: rgb(37, 41, 52);
+    border-radius: 16px;
+    font-size: 25px;
   }
 
   .home_link {
     font-size: 25px;
-    font-weight: 700;
-    transition: opacity 0.3s, font-size 0.1s;
+    transition: font-size 0.1s, font-weight 0.1s, text-decoration 0.1s,
+      background-color 0.3s;
   }
 }

@@ -29,22 +29,15 @@
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  padding-top: 15px;
+  padding-top: 5px;
   position: relative;
   width: 400px;
   max-width: 80%;
   text-align: left;
 }
 
-.project-created {
-  margin-left: 15px;
-  font-size: 11px;
-  opacity: 0.9;
-  width: 100px;
-}
-
 .link-container {
-  margin-bottom: 20px;
+  margin: 20px 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -67,15 +60,25 @@
   font-size: 11px;
 }
 
+.project-sub-info {
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-around;
+}
 .project-language {
   font-size: 11px;
-  text-align: center;
+}
+
+.project-created {
+  font-size: 11px;
+  /* width: 100px; */
 }
 
 .project-img {
   width: 100%;
   height: auto;
   border-radius: 0px;
+  margin: 0;
 }
 
 @media only screen and (min-width: 800px) {
@@ -107,15 +110,10 @@
   }
 
   .project-card-content {
-    border-radius: 16px;
-    background-color: #fff;
     display: flex;
-    flex-direction: column;
-    padding-top: 15px;
     position: relative;
     width: 400px;
     max-width: 70%;
-    text-align: left;
   }
 
   .projects_project-card:nth-child(odd) .project-card-content {

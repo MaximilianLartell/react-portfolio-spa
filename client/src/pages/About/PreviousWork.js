@@ -10,7 +10,7 @@ function PreviousWork() {
         <h3 className='previout-work-header'>Previous work</h3>
       </Fade>
       {jobHistory().map((el, i) => (
-        <Fade left>
+        <Fade left key={el.employer}>
           <JobCard
             key={el.employer + i}
             employer={el.employer}

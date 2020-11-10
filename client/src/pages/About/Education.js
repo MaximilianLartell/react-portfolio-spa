@@ -10,7 +10,7 @@ function Education() {
         <h3 className='education-header'>Education</h3>
       </Fade>
       {educationHistory().map((el, i) => (
-        <Fade right>
+        <Fade right key={el.education}>
           <EducationCard
             key={el.education + i}
             education={el.education}

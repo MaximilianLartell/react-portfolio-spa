@@ -17,13 +17,16 @@ function ProjectCard({
         <h4 className='project-name'>{name}</h4>
         {imgExist(name) ? (
           <img
+            alt='me'
             className='project-img'
             src={require(`../../pictures/projects/${name}.png`)}
           ></img>
         ) : null}
-        <p className='project-language'>Written in {language}</p>
+        <div className='project-sub-info'>
+          <p className='project-language'>{language}</p>
+          <p className='project-created'>{created_at.split('T')[0]}</p>
+        </div>
         <CustomAccordion text={description} />
-        <p className='project-created'>{created_at.split('T')[0]}</p>
         <div className='link-container'>
           <div
             className='project-card_link'

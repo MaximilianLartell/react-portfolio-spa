@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import AboutAccordion from '../../components/AboutAccordion';
+import React from 'react';
+import CustomAccordion from '../../components/Accordion';
 
 function JobCard({ employer, position, description, years }) {
   return (
@@ -8,8 +8,8 @@ function JobCard({ employer, position, description, years }) {
         <h4 className='job-card_employer'>{employer}</h4>
       </div>
       <p className='job-card_position'>{position}</p>
-      <AboutAccordion text={description} />
       <p className='job-card_years'>{years}</p>
+      <CustomAccordion text={description} />
     </div>
   );
 }
