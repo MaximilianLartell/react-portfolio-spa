@@ -1,6 +1,6 @@
 .navbar-wrapper {
   position: relative;
-  height: 50px;
+  height: 30px;
   text-align: center;
   z-index: 2;
 }
@@ -23,7 +23,8 @@
 
 .navbar-link-active {
   color: white;
-  margin: auto 10px;
+  margin: auto 8px;
+  font-size: 12px;
 }
 
 @media only screen and (min-width: 600px) {

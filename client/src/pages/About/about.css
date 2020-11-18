@@ -3,7 +3,11 @@
 .about {
   padding: 70px 0;
   text-align: center;
-  /* opacity: 0.99; */
+}
+
+.skills {
+  padding: 70px 0;
+  text-align: center;
 }
 
 .about_experience {

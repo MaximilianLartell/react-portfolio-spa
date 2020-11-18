@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 import './navbar.css';
 
 function Navbar() {
-  const [opacity, setOpacity] = useState([0, 0, 0, 0]);
+  const [opacity, setOpacity] = useState([0, 0, 0, 0, 0]);
   const [linkStatus, setLinkStatus] = useState('disabled');
   const [height, setHeight] = useState(0);
   const ref = useRef(null);
@@ -11,35 +11,38 @@ function Navbar() {
   const mouseEnter = (e) => {
     if (ref.current && ref.current.getBoundingClientRect().y === 0) {
       if (e.target.id === 'nav_1') {
-        setOpacity([1, 0.5, 0.5, 0.5]);
+        setOpacity([1, 0.5, 0.5, 0.5, 0.5]);
       }
       if (e.target.id === 'nav_2') {
-        setOpacity([0.5, 1, 0.5, 0.5]);
+        setOpacity([0.5, 1, 0.5, 0.5, 0.5]);
       }
       if (e.target.id === 'nav_3') {
-        setOpacity([0.5, 0.5, 1, 0.5]);
+        setOpacity([0.5, 0.5, 1, 0.5, 0.5]);
       }
       if (e.target.id === 'nav_4') {
-        setOpacity([0.5, 0.5, 0.5, 1]);
+        setOpacity([0.5, 0.5, 0.5, 1, 0.5]);
+      }
+      if (e.target.id === 'nav_5') {
+        setOpacity([0.5, 0.5, 0.5, 0.5, 1]);
       }
     }
   };
 
   const mouseLeave = (e) => {
     if (ref.current && ref.current.getBoundingClientRect().y > 0) {
-      setOpacity([0, 0, 0, 0]);
+      setOpacity([0, 0, 0, 0, 0]);
     } else {
-      setOpacity([1, 1, 1, 1]);
+      setOpacity([1, 1, 1, 1, 1]);
     }
   };
 
   const handleScroll = () => {
     if (ref.current && ref.current.getBoundingClientRect().y > 0) {
-      setOpacity([0, 0, 0, 0]);
+      setOpacity([0, 0, 0, 0, 0]);
       setLinkStatus('disabled');
       setHeight(0);
     } else {
-      setOpacity([1, 1, 1, 1]);
+      setOpacity([1, 1, 1, 1, 1]);
       setLinkStatus('active');
       setHeight(50);
     }
@@ -90,7 +93,7 @@ function Navbar() {
           id='nav_3'
           className={`navbar-link-${linkStatus}`}
           activeClass='active'
-          to='projects'
+          to='skills'
           spy={true}
           smooth={true}
           offset={0}
@@ -99,10 +102,25 @@ function Navbar() {
           onMouseLeave={(e) => mouseLeave(e)}
           style={{ opacity: opacity[2] }}
         >
-          Projects
+          Skills
         </Link>
         <Link
           id='nav_4'
+          className={`navbar-link-${linkStatus}`}
+          activeClass='active'
+          to='projects'
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={300}
+          onMouseEnter={(e) => mouseEnter(e)}
+          onMouseLeave={(e) => mouseLeave(e)}
+          style={{ opacity: opacity[3] }}
+        >
+          Projects
+        </Link>
+        <Link
+          id='nav_5'
           className={`navbar-link-${linkStatus}`}
           activeClass='active'
           to='contact'
@@ -112,7 +130,7 @@ function Navbar() {
           duration={300}
           onMouseEnter={(e) => mouseEnter(e)}
           onMouseLeave={(e) => mouseLeave(e)}
-          style={{ opacity: opacity[3] }}
+          style={{ opacity: opacity[4] }}
         >
           Contact
         </Link>

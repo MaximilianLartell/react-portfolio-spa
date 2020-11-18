@@ -4,7 +4,6 @@ import { SkillCard } from './SkillCard';
 function Skills() {
   return (
     <div className='about_skills'>
-      <h3 className='skills-header'>Skills</h3>
       <div className='skill-card-wrapper'>
         <SkillCard title='Languages' select='language' />
         <SkillCard title='Frontend' select='frontEnd' />

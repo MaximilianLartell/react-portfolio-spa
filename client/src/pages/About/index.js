@@ -9,19 +9,24 @@ import './about.css';
 
 function About() {
   return (
-    <div className='about'>
-      <Fade bottom>
-        <h1>About me</h1>
-        <img alt='img of me' src={profilePic}></img>
-      </Fade>
-      <AboutText />
-      <section className='about_experience'>
-        <PreviousWork />
-        <Education />
-      </section>
-      <Fade>
-        <Skills />
-      </Fade>
+    <div>
+      <div className='about'>
+        <Fade bottom>
+          <h1>About me</h1>
+          <img alt='img of me' src={profilePic}></img>
+        </Fade>
+        <AboutText />
+        <section className='about_experience'>
+          <PreviousWork />
+          <Education />
+        </section>
+      </div>
+      <div className='skills'>
+        <Fade>
+          <h1>Skills</h1>
+          <Skills />
+        </Fade>
+      </div>
     </div>
   );
 }
