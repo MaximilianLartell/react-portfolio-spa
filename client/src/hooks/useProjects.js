@@ -13,7 +13,10 @@ function useProjects() {
       },
     })
       .then((response) => {
-        const resArray = response.data.map((project) => {
+        const starred = response.data.filter(
+          (project) => project.stargazers_count > 0 && project.id !== 316048037
+        );
+        const resArray = starred.map((project) => {
           const proj = {
             name: project.name,
             description: project.description,
