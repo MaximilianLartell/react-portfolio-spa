@@ -25,6 +25,7 @@ function useProjects() {
           return proj;
         });
         const newArray = sortArray(resArray);
+
         setProjects([...newArray]);
         return null;
       })
@@ -32,6 +33,8 @@ function useProjects() {
         console.log(err);
       });
   }, []);
+
+  useEffect(() => {}, []);
 
   return projects;
 }

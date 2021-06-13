@@ -5,14 +5,16 @@ import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import './accordion.css';
+import { SortOutlined } from '@material-ui/icons';
 
 const Accordion = withStyles({
   root: {
     margin: '0 15px',
     boxShadow: 'none',
     borderRadius: 16,
-    // backgroundColor: 'rgb(210, 230, 207)',
-    backgroundColor: 'rgb(206, 212, 200)',
+    backgroundColor: 'white',
+    border: 'solid 1px rgb(0, 0, 0, 0.2)',
+
     '&:not(:last-child)': {
       borderBottom: 0,
     },
@@ -43,7 +45,7 @@ const AccordionSummary = withStyles({
     '&$expanded': {
       minHeight: 56,
       borderBottom: 'none',
-      backgroundColor: 'rgb(168, 173, 163)',
+      backgroundColor: 'rgb(0, 0, 0, 0.04)',
       borderRadius: '16px 16px 0 0',
     },
   },

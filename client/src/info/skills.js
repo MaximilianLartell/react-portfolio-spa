@@ -10,16 +10,18 @@ const skills = (key) => {
       { l: 'React', i: 'react.svg' },
       { l: 'Material-UI', i: 'material-ui.svg' },
       { l: 'React Router', i: 'react-router.svg' },
+      { l: 'Redux', i: 'redux.svg' },
+      { l: 'Redux-Saga', i: 'redux-saga.svg' },
     ],
     backEnd: [
       { l: 'Node.js', i: 'nodejs.svg' },
       { l: 'Express', i: 'express.svg' },
-      { l: 'Graphql', i: 'graphql.svg' },
+      // { l: 'Graphql', i: 'graphql.svg' },
     ],
     databases: [
       { l: 'MongoDB', i: 'mongodb.svg' },
       { l: 'PostgreSQL', i: 'postgresql.svg' },
-      { l: 'Firebase', i: 'firebase.svg' },
+      // { l: 'Firebase', i: 'firebase.svg' },
     ],
     versionControll: [{ l: 'Git', i: 'git.svg' }],
     tools: [
