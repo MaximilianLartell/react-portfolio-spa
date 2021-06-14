@@ -1,21 +1,35 @@
+.contact {
+  text-align: center;
+  margin: 70px 0 400px 0;
+}
 
-  
-  .contact {
-    text-align: center;
-    margin: 70px 0 400px 0;
-  }
-  
+.contact_email {
+  font-size: 30px;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.icon-wrapper {
+  margin: auto 5px;
+}
+
+.icon-wrapper:hover {
+  opacity: 0.9;
+}
+.icon-wrapper:active {
+  opacity: 0.6;
+}
+
+@media only screen and (min-width: 600px) {
   .contact_email {
-    font-size: 30px;
+    font-size: 40px;
   }
 
-  @media only screen and (min-width: 600px) {
-    .contact_email {
-      font-size: 40px;
-    }
-
-    .contact_link:hover {
-      cursor: pointer;
-    }
+  .contact_link:hover {
+    cursor: pointer;
   }
-  
+}

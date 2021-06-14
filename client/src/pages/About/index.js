@@ -4,7 +4,7 @@ import AboutText from './AboutText';
 import PreviousWork from './PreviousWork';
 import Education from './Education';
 import Skills from './Skills';
-import profilePic from '../../pictures/profile2.png';
+import profilePic from '../../pictures/profile3.png';
 import './about.css';
 
 function About() {

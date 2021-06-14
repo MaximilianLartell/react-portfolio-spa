@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-import { Link } from "react-scroll";
-import Fade from "react-reveal/Fade";
-import "./home.css";
+import React, { useState } from 'react';
+import { Link } from 'react-scroll';
+import Fade from 'react-reveal/Fade';
+import './home.css';
 
 function Home() {
   const [linkOpacity, setLinkOpacity] = useState([1, 1]);
   const [opacity, setOpacity] = useState({ opacity: 1 });
 
   const changeLinkOpacity = (e) => {
-    if (e && e.target.id === "1") {
+    if (e && e.target.id === '1') {
       setLinkOpacity([1, 0.5]);
     }
-    if (e && e.target.id === "2") {
+    if (e && e.target.id === '2') {
       setLinkOpacity([0.5, 1]);
     }
   };
@@ -26,24 +26,24 @@ function Home() {
   };
 
   return (
-    <div className="home">
+    <div className='home'>
       <Fade left>
-        <section className="home_content-container">
+        <section className='home_content-container'>
           <h1 style={opacity}>
             Hi, <br /> my name is Maximilian
           </h1>
-          <br />{" "}
+          <br />{' '}
           <h3 style={opacity}>
-            I'm a Civil engineer, turned fullstack developer.
+            I'm a Full Stack Developer with a master in Engineering.
           </h3>
-          <br />{" "}
-          <p className="home_paragraph">
+          <br />{' '}
+          <p className='home_paragraph'>
             <span style={opacity}>Want to know </span>
             <Link
-              id="1"
-              className="home_link"
-              activeClass="active"
-              to="about"
+              id='1'
+              className='home_link'
+              activeClass='active'
+              to='about'
               spy={true}
               smooth={true}
               offset={0}
@@ -59,10 +59,10 @@ function Home() {
             </Link>
             <span style={opacity}>, and </span>
             <Link
-              id="2"
-              className="home_link"
-              activeClass="active"
-              to="projects"
+              id='2'
+              className='home_link'
+              activeClass='active'
+              to='projects'
               spy={true}
               smooth={true}
               offset={0}
