@@ -6,19 +6,15 @@ import jobHistory from '../../info/jobHistory';
 function PreviousWork() {
   return (
     <div className='about_previous-work'>
-      <Fade left>
-        <h3 className='previout-work-header'>Previous work</h3>
-      </Fade>
+      <h3 className='previout-work-header'>Previous work</h3>
       {jobHistory().map((el, i) => (
-        <Fade left key={el.employer}>
-          <JobCard
-            key={el.employer + i}
-            employer={el.employer}
-            position={el.position}
-            description={el.description}
-            years={el.years}
-          />
-        </Fade>
+        <JobCard
+          key={el.employer + i}
+          employer={el.employer}
+          position={el.position}
+          description={el.description}
+          years={el.years}
+        />
       ))}
     </div>
   );

@@ -11,10 +11,8 @@ function About() {
   return (
     <div>
       <div className='about'>
-        <Fade bottom>
-          <h1>About me</h1>
-          <img alt='img of me' src={profilePic}></img>
-        </Fade>
+        <h1>About me</h1>
+        <img alt='img of me' src={profilePic}></img>
         <AboutText />
         <section className='about_experience'>
           <PreviousWork />
@@ -22,10 +20,8 @@ function About() {
         </section>
       </div>
       <div className='skills'>
-        <Fade>
-          <h1>Skills</h1>
-          <Skills />
-        </Fade>
+        <h1>Skills</h1>
+        <Skills />
       </div>
     </div>
   );

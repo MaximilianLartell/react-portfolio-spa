@@ -12,17 +12,17 @@ const Accordion = withStyles({
     margin: '0 15px',
     boxShadow: 'none',
     borderRadius: 16,
-    backgroundColor: 'white',
-    border: 'solid 1px rgb(0, 0, 0, 0.2)',
+    backgroundColor: 'rgb(240, 240, 240)',
+    // border: 'solid 1px rgb(0, 0, 0, 0.4)',
 
     '&:not(:last-child)': {
       borderBottom: 0,
     },
     '&:hover': {
-      boxShadow: '0px 0px 2px',
+      border: 'solid 1px rgb(0, 0, 0, 0.3)',
     },
     '&:active': {
-      boxShadow: '0px 0px 0px',
+      // backgroundColor: 'rgb(240, 240, 240)',
     },
     '&:before': {
       display: 'none',
@@ -42,10 +42,11 @@ const AccordionSummary = withStyles({
     justifyContent: 'center',
     borderRadius: 16,
     minHeight: 15,
+    backgroundColor: 'rgba(0,0,0, 0.05)',
     '&$expanded': {
       minHeight: 56,
       borderBottom: 'none',
-      backgroundColor: 'rgb(0, 0, 0, 0.04)',
+      backgroundColor: 'rgba(0,0,0, 0.1)',
       borderRadius: '16px 16px 0 0',
     },
   },

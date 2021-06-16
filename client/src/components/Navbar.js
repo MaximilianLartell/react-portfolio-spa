@@ -1,11 +1,12 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
+import styled from 'styled-components';
 import './navbar.css';
 
 function Navbar() {
-  const [opacity, setOpacity] = useState([0, 0, 0, 0, 0]);
-  const [linkStatus, setLinkStatus] = useState('disabled');
-  const [height, setHeight] = useState(0);
+  const [opacity, setOpacity] = useState([1, 1, 1, 1, 1]);
+  const [linkStatus, setLinkStatus] = useState('active');
+  const [top, setTop] = useState(-50);
   const ref = useRef(null);
 
   const mouseEnter = (e) => {
@@ -29,7 +30,7 @@ function Navbar() {
   };
 
   const mouseLeave = (e) => {
-    if (ref.current && ref.current.getBoundingClientRect().y > 0) {
+    if (window.scrollY < 0) {
       setOpacity([0, 0, 0, 0, 0]);
     } else {
       setOpacity([1, 1, 1, 1, 1]);
@@ -37,15 +38,7 @@ function Navbar() {
   };
 
   const handleScroll = () => {
-    if (ref.current && ref.current.getBoundingClientRect().y > 0) {
-      setOpacity([0, 0, 0, 0, 0]);
-      setLinkStatus('disabled');
-      setHeight(0);
-    } else {
-      setOpacity([1, 1, 1, 1, 1]);
-      setLinkStatus('active');
-      setHeight(50);
-    }
+    setTop(window.scrollY);
   };
 
   useEffect(() => {
@@ -56,8 +49,13 @@ function Navbar() {
     };
   }, []);
 
+  useEffect(() => {
+    console.log(top);
+  }, [top]);
+
   return (
-    <div className='navbar-inner' style={{ height: height }} ref={ref}>
+    // <div className='navbar-inner' style={{ height: height }} ref={ref}>
+    <NavbarInner top={top} ref={ref}>
       <ul className='navbar-items'>
         <Link
           id='nav_1'
@@ -67,10 +65,10 @@ function Navbar() {
           spy={true}
           smooth={true}
           offset={0}
-          duration={300}
+          duration={700}
           onMouseEnter={(e) => mouseEnter(e)}
           onMouseLeave={(e) => mouseLeave(e)}
-          style={{ opacity: opacity[0] }}
+          style={{ opacity: opacity[0], transition: 'opacity 0.2s' }}
         >
           Home
         </Link>
@@ -82,10 +80,10 @@ function Navbar() {
           spy={true}
           smooth={true}
           offset={0}
-          duration={300}
+          duration={700}
           onMouseEnter={(e) => mouseEnter(e)}
           onMouseLeave={(e) => mouseLeave(e)}
-          style={{ opacity: opacity[1] }}
+          style={{ opacity: opacity[1], transition: 'opacity 0.2s' }}
         >
           About me
         </Link>
@@ -97,10 +95,10 @@ function Navbar() {
           spy={true}
           smooth={true}
           offset={0}
-          duration={300}
+          duration={700}
           onMouseEnter={(e) => mouseEnter(e)}
           onMouseLeave={(e) => mouseLeave(e)}
-          style={{ opacity: opacity[2] }}
+          style={{ opacity: opacity[2], transition: 'opacity 0.2s' }}
         >
           Skills
         </Link>
@@ -112,10 +110,10 @@ function Navbar() {
           spy={true}
           smooth={true}
           offset={0}
-          duration={300}
+          duration={700}
           onMouseEnter={(e) => mouseEnter(e)}
           onMouseLeave={(e) => mouseLeave(e)}
-          style={{ opacity: opacity[3] }}
+          style={{ opacity: opacity[3], transition: 'opacity 0.2s' }}
         >
           Projects
         </Link>
@@ -127,16 +125,57 @@ function Navbar() {
           spy={true}
           smooth={true}
           offset={0}
-          duration={300}
+          duration={700}
           onMouseEnter={(e) => mouseEnter(e)}
           onMouseLeave={(e) => mouseLeave(e)}
-          style={{ opacity: opacity[4] }}
+          style={{ opacity: opacity[4], transition: 'opacity 0.2s' }}
         >
           Contact
         </Link>
       </ul>
-    </div>
+    </NavbarInner>
   );
 }
 
 export default Navbar;
+
+const NavbarInner = styled('div')`
+  position: fixed;
+  top: ${(p) => {
+    if (p.top < 600) {
+      return '-50px';
+    }
+    if (p.top > 600 && p.top < 650) {
+      return `${p.top - 650}px`;
+    }
+    if (p.top > 650) {
+      return '0px';
+    }
+  }};
+  left: 0;
+  right: 0;
+  z-index: 2;
+  text-align: center;
+  padding: 10px;
+  transition: opacity 1s;
+  background-color: white;
+  opacity: 0.8;
+  box-shadow: 0 1px 1px -1px gray;
+  height: 50px;
+`;
+
+// .sticky .navbar-inner {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   z-index: 2;
+// }
+
+// .navbar-inner {
+//   text-align: center;
+//   padding: 10px;
+//   transition: height 1s, opacity 1s;
+//   background-color: rgb(209, 209, 209);
+//   box-shadow: 0 1px 1px -1px gray;
+// }

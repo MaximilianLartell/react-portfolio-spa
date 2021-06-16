@@ -16,13 +16,13 @@
 .navbar-inner {
   text-align: center;
   padding: 10px;
-  background-color: white;
-  transition: height 0.2s, opacity 0.2s;
-  background-color: rgb(37, 41, 52);
+  transition: height 1s, opacity 1s;
+  background-color: rgb(209, 209, 209);
+  box-shadow: 0 1px 1px -1px gray;
 }
 
 .navbar-link-active {
-  color: white;
+  color: rgb(0, 0, 0, 0.8);
   margin: auto 8px;
   font-size: 12px;
 }
@@ -30,7 +30,7 @@
 @media only screen and (min-width: 600px) {
   .navbar-link-active {
     margin: 0 10px;
-    transition: opacity 0.2s, font-size 0.2s;
+    transition: opacity 1s, font-size 0.2s;
     font-size: 15px;
     cursor: pointer;
   }

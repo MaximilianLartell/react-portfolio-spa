@@ -1,6 +1,6 @@
 .home {
-  background-color: rgb(37, 41, 52);
-  color: rgb(240, 239, 239);
+  background-color: white;
+  color: rgb(0, 0, 0, 0.7);
   height: 100vh;
   text-align: center;
   padding-top: 150px;
@@ -15,16 +15,16 @@
 
 .home_link {
   padding: 3px 6px;
-  color: rgb(37, 41, 52);
-  background-color: rgba(132, 158, 144);
+  color: rgb(0, 0, 0, 0.7);
+  background-color: rgba(182, 233, 167, 0.7);
   border-radius: 16px;
 }
 
 .home_link:active {
   font-weight: 200;
   padding: 3px 6px;
-  color: rgb(37, 41, 52);
-  background-color: rgb(206, 212, 200);
+  color: rgb(0, 0, 0, 0.7);
+  background-color: rgba(182, 233, 167, 0.4);
   border-radius: 16px;
   font-size: 15px;
 }
@@ -33,8 +33,8 @@
   .home_link:hover {
     font-size: 30px;
     font-weight: 500;
-    color: white;
-    background-color: rgb(37, 41, 52);
+    color: rgb(0, 0, 0, 0.7);
+    background-color: white;
     cursor: pointer;
     text-decoration: none;
   }
@@ -42,8 +42,8 @@
   .home_link:active {
     font-weight: 200;
     padding: 3px 6px;
-    color: white;
-    background-color: rgb(37, 41, 52);
+    color: rgb(0, 0, 0, 0.7);
+    background-color: rgba(182, 233, 167, 0.4);
     border-radius: 16px;
     font-size: 25px;
   }

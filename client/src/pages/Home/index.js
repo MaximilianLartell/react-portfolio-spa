@@ -47,7 +47,7 @@ function Home() {
               spy={true}
               smooth={true}
               offset={0}
-              duration={300}
+              duration={700}
               onMouseEnter={(e) => onHover(0.5, e)}
               onMouseLeave={(e) => {
                 onHover(1, e);
@@ -66,7 +66,7 @@ function Home() {
               spy={true}
               smooth={true}
               offset={0}
-              duration={300}
+              duration={700}
               onMouseEnter={(e) => onHover(0.5, e)}
               onMouseLeave={(e) => {
                 onHover(1, e);

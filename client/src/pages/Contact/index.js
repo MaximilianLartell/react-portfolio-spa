@@ -10,7 +10,7 @@ function Projects() {
   const github = 'https://github.com/MaximilianLartell';
 
   return (
-    <Fade>
+    <>
       <div className='contact'>
         <h1>Contact</h1>
         <a className='contact_email' href='mailto: max.lartell@gmail.com'>
@@ -29,7 +29,7 @@ function Projects() {
           </div>
         </IconContext.Provider>
       </div>
-    </Fade>
+    </>
   );
 }
 

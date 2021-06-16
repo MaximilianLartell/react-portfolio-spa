@@ -36,7 +36,7 @@ const AccordionSummary = withStyles({
       borderBottom: 'none',
     },
     '&:hover': {
-      borderBottom: '1px solid rgb(50, 55, 68)',
+      borderBottom: '1px solid rgb(0, 0, 0, 0.3)',
     },
   },
   content: {
@@ -51,7 +51,7 @@ const AccordionDetails = withStyles((theme) => ({
   root: {
     padding: 15,
     borderRadius: 0,
-    backgroundColor: 'rgb(242, 243, 241)',
+    backgroundColor: 'rgb(0, 0, 0, 0.3)',
     marginTop: 0,
   },
 }))(MuiAccordionDetails);

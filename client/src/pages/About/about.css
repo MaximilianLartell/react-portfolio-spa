@@ -44,7 +44,8 @@
 .about_education-card,
 .skill-card {
   text-align: left;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
+  border: solid 1px rgb(0, 0, 0, 0.3);
   border-radius: 16px;
   width: 100%;
   margin: 10px auto;
