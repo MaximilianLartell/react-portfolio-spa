@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
 import Fade from 'react-reveal/Fade';
+import styled from 'styled-components';
 import './home.css';
 
 function Home() {
@@ -28,7 +29,7 @@ function Home() {
   return (
     <div className='home'>
       <Fade left>
-        <section className='home_content-container'>
+        <Wrapper>
           <h1 style={opacity}>
             Hi, <br /> my name is Maximilian
           </h1>
@@ -77,10 +78,60 @@ function Home() {
               what I can do?
             </Link>
           </p>
-        </section>
+        </Wrapper>
       </Fade>
     </div>
   );
 }
 
 export default Home;
+
+const Wrapper = styled('div')`
+  color: #f4bf3c;
+  display: inline-block;
+  width: 90%;
+  text-align: left;
+  margin: auto;
+
+  .home_link {
+    padding: 3px 6px;
+    color: #f4bf3c;
+    background-color: #286360;
+    border-radius: 16px;
+  }
+
+  .home_link:active {
+    font-weight: 200;
+    padding: 3px 6px;
+    color: #f4bf3c;
+    background-color: rgb(126, 147, 138);
+    border-radius: 16px;
+    font-size: 15px;
+  }
+
+  @media (min-width: 600px) {
+    .home_link:hover {
+      font-size: 30px;
+      font-weight: 500;
+      color: #f4bf3c;
+      background-color: rgb(126, 147, 138);
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .home_link:active {
+      font-weight: 200;
+      padding: 3px 6px;
+      color: #f4bf3c;
+      background-color: rgba(182, 233, 167, 0.4);
+      border-radius: 16px;
+      font-size: 25px;
+    }
+
+    .home_link {
+      font-size: 25px;
+      transition: font-size 0.1s, font-weight 0.1s, text-decoration 0.1s,
+        background-color 0.3s;
+    }
+  }
+`;

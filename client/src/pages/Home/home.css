@@ -1,5 +1,8 @@
+.test {
+  background-color: rgb(183, 233, 183);
+}
 .home {
-  background-color: white;
+  background-color: rgb(126, 147, 138);
   color: rgb(0, 0, 0, 0.7);
   height: 100vh;
   text-align: center;
