@@ -36,7 +36,7 @@ const AccordionSummary = withStyles({
       borderBottom: 'none',
     },
     '&:hover': {
-      borderBottom: '1px solid rgb(0, 0, 0, 0.3)',
+      opacity: '0.3',
     },
   },
   content: {

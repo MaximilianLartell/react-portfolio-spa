@@ -35,7 +35,7 @@ function Home() {
           </h1>
           <br />{' '}
           <h3 style={opacity}>
-            I'm a Full Stack Developer with a master in Engineering.
+            I'm a Civil Engineer gone Full Stack Developer.
           </h3>
           <br />{' '}
           <p className='home_paragraph'>

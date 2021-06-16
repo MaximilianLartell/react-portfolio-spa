@@ -9,7 +9,7 @@ import styled from 'styled-components';
 const thresholds = {
   screen: {
     about: 650,
-    skills: 2200,
+    skills: 2150,
     projects: 3250,
     contact: 5900,
   },
@@ -25,13 +25,13 @@ const colors = {
   about: '#C46D5E',
   skills: '#474973',
   projects: '#286360',
-  contact: '#f4bf3c',
+  contact: 'rgb(240, 210,140)',
 };
 
 function App() {
   const [top, setTop] = useState();
 
-  const ref = useRef(null);
+  // const ref = useRef(null);
 
   const handleScroll = () => {
     setTop(window.scrollY);
@@ -47,7 +47,7 @@ function App() {
 
   return (
     <div className='App'>
-      <Wrapper ref={ref} top={top}>
+      <Wrapper top={top}>
         <Home />
         <Navbar />
         <main>
@@ -85,7 +85,7 @@ const Wrapper = styled('div')`
       return '#286360';
     }
     if (p.top > thresholds.screen.contact) {
-      return '#f4bf3c';
+      return 'rgb(240, 210,140)';
     }
   }};
 
@@ -110,7 +110,7 @@ const Wrapper = styled('div')`
         return '#286360';
       }
       if (p.top > thresholds.mobile.contact) {
-        return '#f4bf3c';
+        return 'rgb(240, 210,140)';
       }
     }};
   }

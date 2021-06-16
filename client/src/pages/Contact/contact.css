@@ -1,10 +1,12 @@
 .contact {
   text-align: center;
   margin: 70px 0 0 0;
+  color: black;
 }
 
 .contact_email {
   font-size: 30px;
+  color: black;
 }
 
 .icon-container {

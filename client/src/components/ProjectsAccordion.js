@@ -9,13 +9,13 @@ import { SortOutlined } from '@material-ui/icons';
 
 const Accordion = withStyles({
   root: {
-    color: '#C46D5E',
+    color: '#286360',
     margin: '0 15px',
     boxShadow: 'none',
     borderRadius: 18,
     backgroundColor: 'rgb(246,214, 143)',
 
-    border: 'solid 2px #C46D5E',
+    border: 'solid 2px #286360',
     '&:not(:last-child)': {
       borderBottom: 0,
     },
@@ -74,7 +74,7 @@ const AccordionDetails = withStyles((theme) => ({
   },
 }))(MuiAccordionDetails);
 
-export default function CustomAccordion({ text }) {
+export default function ProjectsAccordion({ text }) {
   const [title, setTitle] = useState('Read more');
 
   const changeTitle = () => {
@@ -85,7 +85,7 @@ export default function CustomAccordion({ text }) {
     <div>
       <Accordion square>
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon style={{ color: '#C46D5E' }} />}
+          expandIcon={<ExpandMoreIcon style={{ color: '#286360' }} />}
           onClick={() => changeTitle()}
         >
           <p className='title'>{title}</p>

@@ -1,5 +1,5 @@
 import React from 'react';
-import CustomAccordion from '../../components/Accordion';
+import ProjectsAccordion from '../../components/ProjectsAccordion';
 import { imgExist } from '../../utils';
 
 function ProjectCard({
@@ -26,7 +26,7 @@ function ProjectCard({
           <p className='project-language'>{language}</p>
           <p className='project-created'>{created_at.split('T')[0]}</p>
         </div>
-        <CustomAccordion text={description} />
+        <ProjectsAccordion text={description} />
         <div className='link-container'>
           <div
             className='project-card_link'

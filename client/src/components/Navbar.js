@@ -142,10 +142,10 @@ const NavbarInner = styled('div')`
   transition-delay: 0.5s;
   transition: background-color 1s;
   background-color: ${(p) => {
-    if (p.top < 2200) {
+    if (p.top < 2150) {
       return 'rgb(126, 147, 138)';
     }
-    if (p.top > 2200 && p.top < 3250) {
+    if (p.top > 2150 && p.top < 3250) {
       return `#C46D5E`;
     }
     if (p.top > 3250 && p.top < 5900) {
